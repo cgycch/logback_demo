@@ -43,6 +43,7 @@ public class InitLog4jListener implements ServletContextListener{
 //         }  
     	 System.out.println("listener===============");
     	 System.setProperty("MY_HOME", sc.getRealPath("/")+"WEB-INF/backlogs");
+    	 System.setProperty("MY_HOME2", sc.getRealPath("/")+"WEB-INF/log4jlogs");
     	 System.setProperty("log.root.level", "debug");
     	 System.out.println("listener===============");
     }
