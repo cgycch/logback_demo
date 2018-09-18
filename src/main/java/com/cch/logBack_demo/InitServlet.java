@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.cch.logBack_demo.abc.Abc;
+import com.cch.logBack_demo.asd.Asd;
+
 /**
  * Servlet implementation class InitServlet
  */
@@ -31,17 +34,25 @@ public class InitServlet extends HttpServlet {
     	super.init(config);
     	System.out.println("init....");
     	System.out.println("Hello World!");
+    	System.out.println("========log4j=========");
 		LOG4J.trace("log4j trace");
 		LOG4J.debug("log4j debug");
 		LOG4J.info("log4j info");
 		LOG4J.warn("log4j warn");
 		LOG4J.error("log4j error");
-		System.out.println("=================");
+		System.out.println("========SL4J=========");
 		SL4J.trace("SL4J trace");
 		SL4J.debug("SL4J debug");
 		SL4J.info("SL4J info");
 		SL4J.warn("SL4J warn");
 		SL4J.error("SL4J error");
+		System.out.println("========abc=========");
+		Abc abc = new Abc();
+		abc.abcLog();
+		System.out.println("========asd=========");
+		Asd asd = new Asd();
+		asd.asdLog();
+		System.out.println("=================");
     }
 
 }
